@@ -63,6 +63,8 @@ public:
      * @param mant The mantissa of the floating-point number [0, 2^(23)-1]
      *  */
     IEEE754_32(uint32_t, uint32_t, uint32_t);
+    /** @brief Move constructor */
+    IEEE754_32(IEEE754_32&&) = default;
     /** @brief Return the floating-point number this object holds*/
     float get();
     /** @briefs Returns the sign of a normalized number (+/-) */
@@ -94,8 +96,12 @@ public:
      * sign(mantissa)(2^exp)
      * */
     friend std::ostream& operator<<(std::ostream&, const IEEE754_32&);
-    
-
+    /** @brief Compares two objects of this kind */
+    bool operator==(const IEEE754_32&);
+    bool operator==(const IEEE754_32&) const;
+    /** @brief Adds two objects of this kind */
+    IEEE754_32 operator+(const IEEE754_32&);
+    IEEE754_32 operator+(const IEEE754_32&) const;
 };
 
 #endif // FLOT32_H

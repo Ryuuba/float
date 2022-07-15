@@ -1,5 +1,6 @@
 #include <iomanip>
 #include <limits>
+#include <utility>
 #include "float32.h"
 
 IEEE754_32::IEEE754_32() : f(0), k(Kind::Normalized) {}
@@ -111,4 +112,24 @@ std::ostream& operator<<(std::ostream& os, const IEEE754_32& fpn) {
     else
         os << fpn.get_sign() << "nan";
     return os;
+}
+
+bool IEEE754_32::operator==(const IEEE754_32& rhs)
+{
+    return this->f.code == rhs.f.code;
+}
+
+bool IEEE754_32::operator==(const IEEE754_32& rhs) const
+{
+    return this->f.code == rhs.f.code;
+}
+
+IEEE754_32 IEEE754_32::operator+(const IEEE754_32& rhs)
+{
+    return this->f.number + rhs.f.number;
+}
+
+IEEE754_32 IEEE754_32::operator+(const IEEE754_32& rhs) const
+{
+    return this->f.number + rhs.f.number;
 }
