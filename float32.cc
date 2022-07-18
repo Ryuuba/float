@@ -133,3 +133,33 @@ IEEE754_32 IEEE754_32::operator+(const IEEE754_32& rhs) const
 {
     return this->f.number + rhs.f.number;
 }
+
+IEEE754_32 IEEE754_32::operator-(const IEEE754_32& rhs)
+{
+    return this->f.number - rhs.f.number;
+}
+
+IEEE754_32 IEEE754_32::operator-(const IEEE754_32& rhs) const
+{
+    return this->f.number - rhs.f.number;
+}
+
+IEEE754_32 IEEE754_32::operator*(const IEEE754_32& rhs)
+{
+    return this->f.number * rhs.f.number;
+}
+
+IEEE754_32 IEEE754_32::operator*(const IEEE754_32& rhs) const
+{
+    return this->f.number * rhs.f.number;
+}
+
+IEEE754_32 IEEE754_32::operator/(const IEEE754_32& rhs)
+{
+    return this->f.number / rhs.f.number;
+}
+
+IEEE754_32 IEEE754_32::operator/(const IEEE754_32& rhs) const
+{
+    return this->f.number / rhs.f.number;
+}

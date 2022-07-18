@@ -102,6 +102,15 @@ public:
     /** @brief Adds two objects of this kind */
     IEEE754_32 operator+(const IEEE754_32&);
     IEEE754_32 operator+(const IEEE754_32&) const;
+    /** @brief Subtracts two objects of this kind */
+    IEEE754_32 operator-(const IEEE754_32&);
+    IEEE754_32 operator-(const IEEE754_32&) const;
+    /** @brief Multiplies two objects of this kind */
+    IEEE754_32 operator*(const IEEE754_32&);
+    IEEE754_32 operator*(const IEEE754_32&) const;
+    /** @brief Divides two objects of this kind */
+    IEEE754_32 operator/(const IEEE754_32&);
+    IEEE754_32 operator/(const IEEE754_32&) const;
 };
 
 #endif // FLOT32_H
